@@ -7,15 +7,15 @@ the number of slaves that the cluster will have so that proper credentials can b
 beforehand. For a 3 node slave:
 
 ```
-docker run -it --name master -h master -e "SLAVES=3" gustavonalle/infinispan-server-domain
+docker run -it --name master -h master -e "SLAVES=3" akalinovski/infinispan-server-domain
 ```
 
 Then launch the slaves, giving the proper host names:
 
 ```
-docker run -it --link master:master -h slave1 gustavonalle/infinispan-server-domain
-docker run -it --link master:master -h slave2 gustavonalle/infinispan-server-domain
-docker run -it --link master:master -h slave3 gustavonalle/infinispan-server-domain
+docker run -it --link master:master -h slave1 akalinovski/infinispan-server-domain
+docker run -it --link master:master -h slave2 akalinovski/infinispan-server-domain
+docker run -it --link master:master -h slave3 akalinovski/infinispan-server-domain
 ```
 
 To access the admin console, first obtain the master IP:
