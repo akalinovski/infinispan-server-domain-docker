@@ -19,6 +19,7 @@ docker run -it --link master:master -h slave3 akalinovski/infinispan-server-doma
 ```
 
 To access the admin console, first obtain the master IP:
+
 ```
 docker inspect --format '{{ .NetworkSettings.IPAddress }}' master
 ```
