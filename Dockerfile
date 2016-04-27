@@ -24,6 +24,6 @@ RUN sed -i '/other-server-group/,+6d' /opt/jboss/infinispan-server/domain/config
 RUN sed -i '/server-two/,+6d' /opt/jboss/infinispan-server/domain/configuration/host.xml
 
 # Expose Infinispan server  ports 
-EXPOSE 57600 7600 8080 8181 9990 11211 11222 
+EXPOSE 57600 7600 8080 8181 9990 9999 11211 11222 
 
 CMD ["/opt/jboss/infinispan-server/bin/start.sh"]
